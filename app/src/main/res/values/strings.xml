@@ -1,0 +1,70 @@
+<resources>
+    <!-- Strings related to login -->
+    <string name="app_name">Vigilanza</string>
+    <string name="login_head">Login</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Let Me In</string>
+    <string name="login_forgot">Forgot</string>
+    <string name="login_invalid_pass">Invalid Password!</string>
+    <string name="login_error">This field is Required!</string>
+    <string name="login_new">I am New</string>
+
+    <!-- Strings related to forgot -->
+    <string name="forgot_head">Forgot your Password?</string>
+    <string name="forgot_otp">OTP</string>
+    <string name="forgot_validate">Reset Password</string>
+    <string name="forgot_resend">Resend OTP</string>
+    <string name="forgot_login">Back to Login</string>
+
+    <!-- Strings related to Home -->
+    <string name="home_head">Welcome</string>
+    <string name="home_button_contacts">Contacts</string>
+    <string name="home_button_capture">Capture</string>
+    <string name="home_button_help">Help Me</string>
+    <string name="home_button_settings">Settings</string>
+    <string name="home_button_pause_all">Pause All</string>
+    <string name="home_button_alert">Alert</string>
+
+    <!-- Strings related to Contacts -->
+    <string name="contact_head">Emergency Contacts</string>
+    <string name="contact_add_new">Add Contact</string>
+    <string name="contact_delete">Delete Contact</string>
+    <string name="contact_update">Update Contact</string>
+
+    <!-- Strings related to Capture -->
+    <string name="capture_head">Capture</string>
+    <string name="capture_start_up">Start Upload</string>
+    <string name="capture_stop_up">Stop Upload</string>
+    <string name="capture_start_rec">Start Record</string>
+    <string name="capture_pause_rec">Pause Record</string>
+    <string name="capture_stop_rec">Stop Record</string>
+    <string name="capture_play">Play Recorded</string>
+    <string name="capture_status">Nothing Happens</string>
+    <string name="capture_stop_play">Stop Playing</string>
+
+    <!-- Strings related to Help -->
+    <string name="help_head">Help Me</string>
+    <string name="help_app_work">How to work</string>
+    <string name="help_about_us">About Us</string>
+    <string name="help_feedback">Feedback</string>
+
+    <!-- Strings related to Settings -->
+    <string name="settings_head">Settings</string>
+
+    <!-- Strings related to SignUp -->
+    <string name="sign_head">Sign Up</string>
+    <string name="sign_name">Name</string>
+    <string name="sign_mob"> Mob No</string>
+    <string name="sign_mob_rec">Recovery No</string>
+    <string name="sign_password">Password</string>
+    <string name="sign_email"> Email</string>
+    <string name="sign_button">Sign Up</string>
+    <string name="sign_login">Back to Login</string>
+
+    <!-- Strings related to Add-Contact -->
+    <string name="add_contact_name">Name</string>
+    <string name="add_contact_no">Mobile No</string>
+    <string name="add_contact_but">Add Contact</string>
+
+</resources>
