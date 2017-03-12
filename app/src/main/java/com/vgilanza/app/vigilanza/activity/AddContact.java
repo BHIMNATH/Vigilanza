@@ -1,5 +1,6 @@
 package com.vgilanza.app.vigilanza.activity;
 
+import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,8 +14,9 @@ import com.vgilanza.app.vigilanza.R;
 
 public class AddContact extends AppCompatActivity {
     private Button add_contact;
-    private EditText textName,textMob;
+    private EditText textName,textMob,textEmail;
     ContactDataBaseAdapter contactDataBaseAdapter;
+    int id_To_Update = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +24,7 @@ public class AddContact extends AppCompatActivity {
         add_contact=(Button) findViewById(R.id.add_contact_but);
         textName=(EditText) findViewById(R.id.add_contact_name);
         textMob=(EditText) findViewById(R.id.add_contact_no);
+        textEmail=(EditText) findViewById(R.id.add_contact_mail);
         contactDataBaseAdapter=new ContactDataBaseAdapter(this);
         try {
             contactDataBaseAdapter = contactDataBaseAdapter.open();
@@ -39,9 +42,9 @@ public class AddContact extends AppCompatActivity {
     public void addContact(){
         String name = textName.getText().toString().trim().toLowerCase();
         String no = textMob.getText().toString().trim().toLowerCase();
-
-        if(!name.isEmpty() && !no.isEmpty()){
-            contactDataBaseAdapter.insertEntry(name, no);
+        String email = textEmail.getText().toString().trim().toLowerCase();
+        if(!name.isEmpty() && !no.isEmpty() && !email.isEmpty()){
+            contactDataBaseAdapter.insertEntry(name, no,email);
             Toast.makeText(getApplicationContext(), "Contact Added ", Toast.LENGTH_LONG).show();
             finish();
         }

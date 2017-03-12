@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.vgilanza.app.vigilanza.R;
 
 public class Contacts extends AppCompatActivity {
     private Button addContact,deleteContact,updateContact;
+    private EditText contact_display;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +19,7 @@ public class Contacts extends AppCompatActivity {
         addContact=(Button) findViewById(R.id.contact_add_but);
         deleteContact=(Button) findViewById(R.id.contact_del_but);
         updateContact=(Button) findViewById(R.id.contact_upd_but);
+        contact_display=(EditText) findViewById(R.id.contacts_display);
         setListeners();
     }
     public void setListeners(){

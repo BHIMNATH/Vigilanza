@@ -65,6 +65,7 @@
     <!-- Strings related to Add-Contact -->
     <string name="add_contact_name">Name</string>
     <string name="add_contact_no">Mobile No</string>
+    <string name="add_contact_email">Email</string>
     <string name="add_contact_but">Add Contact</string>
 
 </resources>

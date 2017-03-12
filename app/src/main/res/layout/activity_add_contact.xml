@@ -9,36 +9,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vgilanza.app.vigilanza.activity.AddContact">
 
-    <EditText
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="@string/add_contact_name"
-        android:ems="10"
-        android:id="@+id/add_contact_name"
-        android:layout_marginTop="85dp"
+        android:gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="@string/add_contact_name"
+            android:ems="10"
+            android:id="@+id/add_contact_name"
+            android:layout_marginTop="85dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:hint="@string/add_contact_no"
-        android:ems="10"
-        android:id="@+id/add_contact_no"
-        android:layout_below="@+id/add_contact_name"
-        android:layout_alignLeft="@+id/add_contact_name"
-        android:layout_alignStart="@+id/add_contact_name" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/add_contact_no"
+            android:ems="10"
+            android:id="@+id/add_contact_no"
+            android:layout_below="@+id/add_contact_name"
+            android:layout_alignLeft="@+id/add_contact_name"
+            android:layout_alignStart="@+id/add_contact_name" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_contact_but"
-        android:id="@+id/add_contact_but"
-        android:layout_below="@+id/add_contact_no"
-        android:layout_alignLeft="@+id/add_contact_no"
-        android:layout_alignStart="@+id/add_contact_no"
-        android:layout_alignRight="@+id/add_contact_no"
-        android:layout_alignEnd="@+id/add_contact_no" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/add_contact_email"
+            android:ems="10"
+            android:id="@+id/add_contact_mail"
+            android:layout_below="@+id/add_contact_no"
+            android:layout_alignLeft="@+id/add_contact_no"
+            android:layout_alignStart="@+id/add_contact_no" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_contact_but"
+            android:id="@+id/add_contact_but"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/add_contact_no"
+            android:layout_alignStart="@+id/add_contact_no" />
+    </LinearLayout>
 </RelativeLayout>

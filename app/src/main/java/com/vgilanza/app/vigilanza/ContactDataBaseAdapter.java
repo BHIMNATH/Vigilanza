@@ -14,7 +14,7 @@ public class ContactDataBaseAdapter {
     static final String DATABASE_NAME = "contacts.db";
     static final int DATABASE_VERSION = 1;
     public static final int NAME_COLUMN = 1;
-    static final String DATABASE_CREATE = "create table " + "CONTACTS" + "( " + "ID" + " integer primary key autoincrement," + "CONTACT_NAME  text, CONTACT_NO  text ); ";
+    static final String DATABASE_CREATE = "create table " + "CONTACTS" + "( " + "ID" + " integer primary key autoincrement," + "CONTACT_NAME  text, CONTACT_NO  text,CONTACT_MAIL text ); ";
     public SQLiteDatabase db;
     private final Context context;
     private DataBaseHelper dbHelper;
@@ -39,10 +39,11 @@ public class ContactDataBaseAdapter {
         return db;
     }
 
-    public void insertEntry(String contact_name,String contact_no) {
+    public void insertEntry(String contact_name,String contact_no,String contact_mail) {
         ContentValues newValues = new ContentValues();
         newValues.put("CONTACT_NAME", contact_name);
         newValues.put("CONTACT_NO", contact_no);
+        newValues.put("CONTACT_MAIL", contact_mail);
         db.insert("CONTACTS", null, newValues);
     }
     public int deleteEntry(String contact_name) {
@@ -52,7 +53,7 @@ public class ContactDataBaseAdapter {
         return numberOFEntriesDeleted;
     }
 
-    public String getSinlgeEntry(String contact_name) {
+    public String getContactName(String contact_name) {
         Cursor cursor = db.query("CONTACTS", null, " CONTACT_NAME=?",
                 new String[] { contact_name }, null, null, null);
         if (cursor.getCount() < 1) {
@@ -60,9 +61,33 @@ public class ContactDataBaseAdapter {
             return "NOT EXIST";
         }
         cursor.moveToFirst();
-        String contact = cursor.getString(cursor.getColumnIndex("CONTACT_NAME"));
+        String contactName = cursor.getString(cursor.getColumnIndex("CONTACT_NAME"));
         cursor.close();
-        return contact;
+        return contactName;
+    }
+    public String getContactNo(String contact_no) {
+        Cursor cursor = db.query("CONTACTS", null, " CONTACT_NO=?",
+                new String[] { contact_no }, null, null, null);
+        if (cursor.getCount() < 1) {
+            cursor.close();
+            return "NOT EXIST";
+        }
+        cursor.moveToFirst();
+        String contactNo = cursor.getString(cursor.getColumnIndex("CONTACT_NO"));
+        cursor.close();
+        return contactNo;
+    }
+    public String getContactMail(String contact_mail) {
+        Cursor cursor = db.query("CONTACTS", null, " CONTACT_MAIL=?",
+                new String[] { contact_mail }, null, null, null);
+        if (cursor.getCount() < 1) {
+            cursor.close();
+            return "NOT EXIST";
+        }
+        cursor.moveToFirst();
+        String contactMail = cursor.getString(cursor.getColumnIndex("CONTACT_MAIL"));
+        cursor.close();
+        return contactMail;
     }
 
     public void updateEntry(String contact_name, String contact_no) {
