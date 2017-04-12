@@ -16,7 +16,6 @@ public class AddContact extends AppCompatActivity {
     private Button add_contact;
     private EditText textName,textMob,textEmail;
     ContactDataBaseAdapter contactDataBaseAdapter;
-    int id_To_Update = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
